@@ -27,8 +27,7 @@ const EarlyAccessModal = ({ setShowModal }: EarlyAccessModalType) => {
   const handleEarlyAccessButton = () => {
     if (earlyAccessInput.length <= 0) return;
 
-    if (earlyAccessInput === earlyAccessCode) {
-      console.log("ENTER");
+    if (earlyAccessInput.toLowerCase() === earlyAccessCode.toLowerCase()) {
       setShowModal(false);
     } else {
       setShowError(true);
